@@ -62,13 +62,6 @@ fi
 echo 'Ставим иксы и драйвера'
 pacman -S $gui_install
 
-echo "Ставим XFCE"
-pacman -S xfce4 xfce4-goodies --noconfirm
-
-echo 'Cтавим DM'
-pacman -S lxdm --noconfirm
-systemctl enable lxdm
-
 echo 'Ставим шрифты'
 pacman -S ttf-liberation ttf-dejavu --noconfirm 
 
