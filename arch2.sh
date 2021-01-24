@@ -31,9 +31,6 @@ grub-install /dev/sda
 echo 'Обновляем grub.cfg'
 grub-mkconfig -o /boot/grub/grub.cfg
 
-echo 'Ставим программу для Wi-fi'
-pacman -S dialog wpa_supplicant --noconfirm 
-
 echo 'Добавляем пользователя'
 useradd -m -g users -G wheel -s /bin/bash $username
 
@@ -72,6 +69,3 @@ echo 'Подключаем автозагрузку менеджера вход�
 systemctl enable NetworkManager
 
 echo 'Установка завершена! Перезагрузите систему.'
-echo 'Если хотите подключить AUR, установить мои конфиги XFCE, тогда после перезагрзки и входа в систему, установите wget (sudo pacman -S wget) и выполните команду:'
-echo 'wget git.io/arch3.sh && sh arch3.sh'
-exit
